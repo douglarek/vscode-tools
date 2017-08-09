@@ -14,11 +14,23 @@ export function activate(context: vscode.ExtensionContext) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
+    let disposable = vscode.commands.registerCommand('ydtranslation.translate', async () => {
         // The code you place here will be executed every time your command is executed
+        const editor = vscode.window.activeTextEditor;
 
-        // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+        // ignore if no file open !
+        if (!editor) {
+            return;
+        }
+
+        const selection = editor.selection;
+        const document = editor.document;
+
+        const textRange = selection.isEmpty ? document.getWordRangeAtPosition(selection.active) : selection;
+        const text = await document.getText(textRange);
+
+        // Display a status bar message to the user
+        vscode.window.setStatusBarMessage(`Current Words: ${text}`, 3000);
     });
 
     context.subscriptions.push(disposable);
