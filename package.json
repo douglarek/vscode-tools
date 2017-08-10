@@ -1,9 +1,13 @@
 {
-    "name": "youdaotranslation",
-    "displayName": "YoudaoTranslation",
-    "description": "A translator using Youdao translation APIs",
+    "name": "mstranslator",
+    "displayName": "MSTranslation",
+    "description": "A translator using Microsoft Translator",
     "version": "0.0.1",
     "publisher": "douglarek",
+    "repository": {
+        "url": "https://github.com/douglarek/mstranslator"
+    },
+    "license": "MIT",
     "engines": {
         "vscode": "^1.14.0"
     },
@@ -11,14 +15,14 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:ydtranslation.translate"
+        "onCommand:mstranslator.translate"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "ydtranslation.translate",
-                "title": "YoudaoTranslation: Translate"
+                "command": "mstranslator.translate",
+                "title": "MSTranslator: Translate"
             }
         ]
     },
@@ -27,6 +31,10 @@
         "compile": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "request-promise": "^4.2.1",
+        "@types/request-promise": "^4.1.36"
     },
     "devDependencies": {
         "typescript": "^2.0.3",
