@@ -2,7 +2,7 @@
     "name": "mstranslator",
     "displayName": "MSTranslation",
     "description": "A translator using Microsoft Translator",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "publisher": "douglarek",
     "repository": {
         "url": "https://github.com/douglarek/mstranslator"
@@ -29,7 +29,8 @@
         "keybindings": [
             {
                 "command": "mstranslator.translate",
-                "key": "alt+1"
+                "key": "alt+1",
+                "when": "editorTextFocus"
             }
         ]
     },
@@ -40,6 +41,7 @@
         "test": "node ./node_modules/vscode/bin/test"
     },
     "dependencies": {
+        "request": "^2.81.0",
         "request-promise": "^4.2.1",
         "@types/request-promise": "^4.1.36"
     },
