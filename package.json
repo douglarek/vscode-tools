@@ -2,12 +2,13 @@
     "name": "mstranslator",
     "displayName": "MSTranslation",
     "description": "A translator using Microsoft Translator",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "douglarek",
     "repository": {
         "url": "https://github.com/douglarek/mstranslator"
     },
     "license": "MIT",
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.14.0"
     },
@@ -25,7 +26,7 @@
                 "title": "MSTranslator: Translate"
             }
         ],
-        "keybindings":[
+        "keybindings": [
             {
                 "command": "mstranslator.translate",
                 "key": "alt+1"
