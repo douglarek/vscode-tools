@@ -24,6 +24,12 @@
                 "command": "mstranslator.translate",
                 "title": "MSTranslator: Translate"
             }
+        ],
+        "keybindings":[
+            {
+                "command": "mstranslator.translate",
+                "key": "alt+1"
+            }
         ]
     },
     "scripts": {
