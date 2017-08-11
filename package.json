@@ -1,11 +1,11 @@
 {
-    "name": "mstranslator",
-    "displayName": "MSTranslation",
-    "description": "A translator using Microsoft Translator",
-    "version": "0.3.0",
+    "name": "translator",
+    "displayName": "Translator",
+    "description": "A translator using Yandex Translate",
+    "version": "0.4.0",
     "publisher": "douglarek",
     "repository": {
-        "url": "https://github.com/douglarek/mstranslator"
+        "url": "https://github.com/douglarek/translator"
     },
     "license": "MIT",
     "icon": "images/icon.png",
@@ -16,19 +16,19 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:mstranslator.translate"
+        "onCommand:translator.translate"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "mstranslator.translate",
-                "title": "MSTranslator: Translate"
+                "command": "translator.translate",
+                "title": "Translator: Translate"
             }
         ],
         "keybindings": [
             {
-                "command": "mstranslator.translate",
+                "command": "translator.translate",
                 "key": "alt+1",
                 "when": "editorTextFocus"
             }
