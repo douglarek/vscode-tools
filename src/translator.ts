@@ -21,3 +21,26 @@ export async function yandexTranslate(text: string): Promise<string> {
         console.log(error)
     }
 }
+
+export async function youdaoTranslate(text: string): Promise<string> {
+    const options = {
+        uri: 'http://fanyi.youdao.com/openapi.do',
+        qs: {
+            keyfrom: 'YouDaoCV',
+            key: '659600698',
+            type: 'data',
+            doctype: 'json',
+            version: '1.1',
+            q: text
+        },
+        headers: {
+            'User-Agent': 'Request-Promise'
+        },
+        json: true
+    };
+    return request(options).then(function (response) {
+        return response.basic.explains.join(" ;");
+    }).catch(function (error) {
+        console.log(error)
+    });
+}

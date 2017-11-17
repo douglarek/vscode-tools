@@ -33,7 +33,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (!text) {
             return;
         }
-        const translation = await translator.yandexTranslate(text);
+        const translation = await translator.youdaoTranslate(text);
 
         // Display a status bar message to the user
         vscode.window.setStatusBarMessage(translation, 3000);
