@@ -1,8 +1,8 @@
 {
     "name": "translator",
     "displayName": "Translator",
-    "description": "A translator using Yandex Translate",
-    "version": "0.4.0",
+    "description": "A translator using Youdao Translate",
+    "version": "0.4.1",
     "publisher": "douglarek",
     "repository": {
         "url": "https://github.com/douglarek/translator"
