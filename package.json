@@ -2,7 +2,7 @@
     "name": "translator",
     "displayName": "Translator",
     "description": "A translator using Youdao Translate",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "publisher": "douglarek",
     "repository": {
         "url": "https://github.com/douglarek/translator"
