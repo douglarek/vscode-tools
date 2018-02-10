@@ -1,11 +1,11 @@
 {
-    "name": "translator",
-    "displayName": "Translator",
-    "description": "A translator using Youdao Translate",
-    "version": "0.4.2",
-    "publisher": "douglarek",
+    "name": "vscode-tools",
+    "displayName": "vscode-tools",
+    "description": "A series of tools for VSCode",
+    "version": "0.0.1",
+    "publisher": "xinlingchao",
     "repository": {
-        "url": "https://github.com/douglarek/translator"
+        "url": "https://github.com/douglarek/vscode-tools"
     },
     "license": "MIT",
     "icon": "images/icon.png",
@@ -15,20 +15,23 @@
     "categories": [
         "Other"
     ],
+    "keywords": [
+        "tools"
+    ],
     "activationEvents": [
-        "onCommand:translator.translate"
+        "onCommand:vscode-tools.translate"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "translator.translate",
-                "title": "Translator: Translate"
+                "command": "vscode-tools.translate",
+                "title": "VSCode-tools: Translate"
             }
         ],
         "keybindings": [
             {
-                "command": "translator.translate",
+                "command": "vscode-tools.translate",
                 "key": "alt+1",
                 "when": "editorTextFocus"
             }
